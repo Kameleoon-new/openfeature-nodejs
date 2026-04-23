@@ -59,6 +59,7 @@ describe('KameleoonResolver', () => {
   ])('resolve_MismatchType_ReturnsErrorTypeMismatch', (variable) => {
     // Arrange
     const variation: VariationType = {
+      name: 'On',
       key: 'on',
       id: -1,
       experimentId: -1,
@@ -85,12 +86,13 @@ describe('KameleoonResolver', () => {
 
   test.each([
     [
-      { key: 'on', id: -1, experimentId: -1, variables: new Map() },
+      { name: 'On', key: 'on', id: -1, experimentId: -1, variables: new Map() },
       false,
       "The variation 'on' has no variables",
     ],
     [
       {
+        name: 'Var',
         key: 'var',
         id: -1,
         experimentId: -1,
@@ -248,6 +250,7 @@ describe('KameleoonResolver', () => {
     (variableKey, variables, expectedValue, defaultValue) => {
       // Arrange
       const variation: VariationType = {
+        name: 'On',
         key: 'on',
         id: -1,
         experimentId: -1,

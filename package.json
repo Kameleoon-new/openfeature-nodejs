@@ -19,7 +19,8 @@
     "test": "jest",
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage",
-    "lint": "eslint -c ../../eslint.config.js 'dist/**/*.js'"
+    "lint": "eslint -c ../../eslint.config.js 'dist/**/*.js'",
+    "madge": "madge -c ./dist"
   },
   "homepage": "https://github.com/Kameleoon/openfeature-nodejs/blob/main/README.md",
   "publishConfig": {
